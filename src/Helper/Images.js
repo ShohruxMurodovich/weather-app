@@ -9,26 +9,26 @@ import Cloud from "../Assets/Images/cloud.gif"
 
 
 
-const Images = ({code}) =>{
-  if(code >= 200 && code<=232){
+const Images = ({ code }) => {
+  if (code >= 200 && code <= 232) {
     return <img src={Storm} alt="Icon"></img>
   }
-  if(code >= 300 && code<=321){
+  if (code >= 300 && code <= 321) {
     return <img src={Drizzle} alt="Icon"></img>
   }
-  if(code >= 500 && code<=531){
+  if (code >= 500 && code <= 531) {
     return <img src={Rain} alt="Icon"></img>
   }
-  if(code >= 600 && code<=622){
+  if (code >= 600 && code <= 622) {
     return <img src={Snow} alt="Icon"></img>
   }
-  if(code >= 700 && code <=781){
+  if (code >= 700 && code <= 781) {
     return <img src={Atmosphere} alt="Icon"></img>
   }
-  if(code == 800){
+  if (code == 800) {
     return <img src={Day} alt="Icon"></img>
   }
-  if(code >= 801 && code<=804){
+  if (code >= 801 && code <= 804) {
     return <img src={Cloud} alt="Icon"></img>
   }
 }

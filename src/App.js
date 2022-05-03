@@ -18,7 +18,7 @@ function App() {
     data: {},
     error: false,
   })
-  const [unit , setUnit] = useState("metric")
+  const [unit, setUnit] = useState("metric")
 
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}&units=${unit}`)
@@ -28,7 +28,7 @@ function App() {
         data: data,
         error: false,
       }))
-  }, [city , unit])
+  }, [city, unit])
 
   const handleSearch = (evt) => {
     if (evt.code === "Enter") {
@@ -37,7 +37,6 @@ function App() {
     }
   }
 
-  console.log(data.data);
 
   return (
     <div className="container">
@@ -52,7 +51,7 @@ function App() {
             <div className="inner-case">
 
               <div className="wrapper">
-                <Images code={data.data.weather[0].id}/>
+                <Images code={data.data.weather[0].id} />
                 <p className='city-temp'>{Math.round(data.data.main.temp)} °C</p>
               </div>
 
@@ -77,14 +76,14 @@ function App() {
 
             </div>
 
-          <div className="btn-case">
-            <button className='btn metric' type='button' onClick={() => setUnit("metric")}>°C</button>
-            <button className='btn standard' type='button' onClick={() => setUnit("standard")}>℉</button>
+            <div className="btn-case">
+              <button className='btn metric' type='button' onClick={() => setUnit("metric")}>°C</button>
+              <button className='btn standard' type='button' onClick={() => setUnit("standard")}>℉</button>
             </div>
 
           </case>
         ) : (
-          <img className='loader' src={Loader} alt='Loader'/>
+          <img className='loader' src={Loader} alt='Loader' />
         )
       }
 
