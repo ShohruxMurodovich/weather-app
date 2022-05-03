@@ -45,7 +45,7 @@ function App() {
 
       {
         data.isFetched ? (
-          <case>
+          <div className='case'>
             <h2 className='city-name'>{data.data.name}</h2>
 
             <div className="inner-case">
@@ -81,7 +81,7 @@ function App() {
               <button className='btn standard' type='button' onClick={() => setUnit("standard")}>℉</button>
             </div>
 
-          </case>
+          </div>
         ) : (
           <img className='loader' src={Loader} alt='Loader' />
         )
